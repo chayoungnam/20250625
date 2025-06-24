@@ -5,7 +5,7 @@ def app():
     st.title('대한민국 연령대별 인구 분포 (상위 5개 행정구역 기준)')
 
     # 데이터 불러오기 ('euc-kr' 인코딩 사용)
-    df = pd.read_csv('202505_202505_연령별인구현황_월간.csv', encoding='euc-kr')
+    df = pd.read_csv('202505_202505_연령별인구현황_월간.csv', encoding='cp949')
 
     # 데이터 전처리: 행정구역 이름 정제
     df['행정구역'] = df['행정구역'].astype(str).str.split(' ').str[0]
